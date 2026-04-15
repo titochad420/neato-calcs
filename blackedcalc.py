@@ -18,10 +18,10 @@ top_label.grid(row=0, column=0, padx=10, pady=10)
 entry = tk.Entry(root)
 entry.grid(row=1, column=0, padx=10, pady=10)
 
-mult_label = tk.Label(root, text="Enter the divisor to scale the radius (e.g., 1 (stock ksp), 2.5(Jnsq) 10(),):")
+mult_label = tk.Label(root, text="Enter the divisor to scale the radius (e.g., 1 (stock ksp), 2.5(Jnsq) 10(real solar system).):")
 mult_label.grid(row=0, column=1, padx=10, pady=10)
 entry2 = tk.Entry(root)
-entry2.grid(row=1, column=1, padx=10, pady=10)
+entry2.grid(row=2, column=0, padx=10, pady=10)
 
 def calculate_gravity():
     global Schildradius
@@ -35,12 +35,12 @@ def calculate_gravity():
         result_label.config(text="Please enter a valid number for the radius.")
 
 calculate_button = tk.Button(root, text="Calculate Gravity", command=calculate_gravity)
-calculate_button.grid(row=2, column=0, padx=10, pady=10)
+calculate_button.grid(row=3, column=0, padx=10, pady=10)
 
 
 
 result_label = tk.Label(root, text="")
-result_label.grid(row=3, column=0, padx=10, pady=10)
+result_label.grid(row=4, column=0, padx=10, pady=10)
 
 
 
