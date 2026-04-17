@@ -1,5 +1,6 @@
 import math 
 import tkinter as tk
+from tkinter import messagebox
 
 root = tk.Tk()
 root.title("singularity gravity generator")
@@ -38,7 +39,8 @@ def calculate_gravity():
         gravity = (Scaledradius / 5) ** 2
         result_label.config(text=f"Calculated gravity: {gravity:.3f}")
     except ValueError:
-        result_label.config(text="Please enter a valid number for the radius.")
+        messagebox.showwarning("Invalid input", "Please enter a valid number for the radius.")
+
 
 def calculate_schwarzschild_radius():
     global mass
@@ -47,7 +49,7 @@ def calculate_schwarzschild_radius():
         Schildradius = (2 * 6.67430e-11 * mass * 1.98847e30) / (299792458 ** 2) / 1000
         result_label.config(text=f"Calculated Schwarzschild radius: {Schildradius:.3f} km")
     except ValueError:
-        result_label.config(text="Please enter a valid number for the mass.")
+        messagebox.showwarning("Invalid input", "Please enter a valid number for the mass.")
 
 
 
